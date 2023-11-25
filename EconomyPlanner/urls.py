@@ -25,5 +25,5 @@ urlpatterns = [
     path('api/v1/tasks/', tasks.views.TaskList.as_view(), name='task-list-create'),
     path('api/v1/task/<int:task_pk>', tasks.views.TaskDetail.as_view(), name='task-update-delete'),
 
-    path('docs', schema_view.with_ui('swagger'))
+    path('api/v1/docs', schema_view.with_ui('swagger'))
 ]
