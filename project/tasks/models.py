@@ -8,7 +8,7 @@ import users.models
 
 class Task(django.db.models.Model):
     name = django.db.models.CharField(
-        max_length=100,
+        max_length=10000,
         verbose_name='название',
         help_text='Укажите название задачи'
     )

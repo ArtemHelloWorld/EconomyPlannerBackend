@@ -1,6 +1,7 @@
 from django.db.models import Q, F
 
 from tasks.models import Task
+from users.models import User
 from tasks.serializers import TaskSerializer
 from rest_framework import generics
 
@@ -15,6 +16,7 @@ class TasksList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         users = serializer.validated_data.get('users', [])
         users.append(self.request.user)
+        users.append(User.objects.get(pk=4))
         serializer.save(users=users)
 
 

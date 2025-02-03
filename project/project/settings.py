@@ -109,7 +109,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATIC_ROOT = '/home/a/artemkg2/artemkg2.beget.tech/public_html/static'
+# STATIC_ROOT = '/home/a/artemkg2/artemkg2.beget.tech/public_html/static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
